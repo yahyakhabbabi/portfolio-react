@@ -16,8 +16,12 @@ export default function Portfolio() {
 
   return (
     <section id="works">
-      <h2 className='workstitle'>My portfolio</h2>
-      <span className='workDesc'>I take more information for this site. I help with things for my work, and I want to thank myself for this effort.</span>
+<div>
+  <h2 className='workstitle'>My Portfolio</h2>
+  <span className='workDesc'>
+    Welcome to my portfolio! Here, I've gathered a collection of my work that represents my dedication and passion. Each project reflects not only my skills but also my commitment to delivering excellence. I've poured my heart and soul into these endeavors, constantly pushing the boundaries to achieve more. This portfolio is a testament to my growth, and I'm thrilled to share it with you. Thank you for taking the time to explore and appreciate the effort behind each creation.
+  </span>
+</div>
       <div className='worksImgs'>
         {imageArray.map((imageUrl, index) => (
           <div key={index} className='workContainer'>
