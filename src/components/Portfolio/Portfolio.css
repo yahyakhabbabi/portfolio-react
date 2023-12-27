@@ -1,45 +1,53 @@
 #works {
-    margin: 0 auto;
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
 }
+
 .workstitle {
-    margin: 1rem 0;
-    font-size: 3rem;
+  margin: 1rem 0;
+  font-size: 3rem;
 }
+
 .workDesc {
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 45rem;
 }
-.worksImgs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 76rem;
+
+.worksImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 76rem;
+  margin: 2rem;
 }
+
 .workImg {
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
+  object-fit: cover;
+  height: 20rem;
+  margin: 0.5rem;
+  transition: transform 0.5s ease-in-out;
 }
-.workBtn{
-    padding: 0.5rem 2.5rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: white;
-    font-size: 1rem;
+
+.workBtn {
+  padding: 0.5rem 2.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: white;
+  font-size: 1rem;
 }
+
 .workContainer {
   position: relative;
   overflow: hidden;
@@ -58,9 +66,11 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.overlay button {
+.overlay a {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  color: #000; /* Customize link color */
+  text-decoration: none;
 }
 
 .overlay:hover {
@@ -68,12 +78,29 @@
   opacity: 1;
 }
 
-.overlay:hover button {
+.overlay:hover a {
   opacity: 1;
+}
+.projectInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 1rem;
+  text-align: left;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
+}
+
+.workContainer:hover .projectInfo {
+  transform: translateY(0);
 }
 @media screen and (max-width:585px) {
     .workImg {
         height: 48vw;
+        margin: 1rem;
     }
     
 }
